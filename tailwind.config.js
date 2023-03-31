@@ -69,7 +69,7 @@ module.exports = {
       poppins: ['Poppins', 'sans-serif'],
     },
   },
-  variants:{
+  variants: {
     extend: {},
   },
   plugins: [],

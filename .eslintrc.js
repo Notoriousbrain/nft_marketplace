@@ -3,22 +3,18 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-  ],
-  overrides: [
-  ],
+  extends: ['plugin:react/recommended', 'airbnb'],
   parserOptions: {
-    ecmaVersion: 'latest',
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-  ],
+  plugins: ['react'],
   rules: {
     'no-console': 0,
-    'jsx-ally/label-has-associated-control': 0,
+    'jsx-a11y/label-has-associated-control': 0,
     'no-nested-ternary': 0,
     'consistent-return': 0,
     'no-alert': 0,
@@ -29,8 +25,8 @@ module.exports = {
     'react/state-in-constructor': 0,
     'import/prefer-default-export': 0,
     'react/react-in-jsx-scope': 'off',
-    'react-jsx-props-no-spreading': 'off',
-    'jsx-ally/no-noninteractive-element-interactions': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'jsx-a11y/no-noninteractive-element-interactions': 'off',
     'react/function-component-definition': [
       2,
       {
@@ -38,10 +34,7 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
-    'max-len': [
-      2,
-      550,
-    ],
+    'max-len': [2, 550],
     'no-multiple-empty-lines': [
       'error',
       {
@@ -52,25 +45,24 @@ module.exports = {
     'no-underscore-dangle': [
       'error',
       {
-        allow: [
-          '_d',
-          '_dh',
-          '_h',
-          '_id',
-          '_m',
-          '_n',
-          '_t',
-          '_text',
-        ],
+        allow: ['_d', '_dh', '_h', '_id', '_m', '_n', '_t', '_text'],
       },
     ],
     'object-curly-newline': 0,
     'react/jsx-filename-extension': 0,
     'react/jsx-one-expression-per-line': 0,
-    'jsx-ally/click-events-have-key-events': 0,
-    'jsx-ally/alt-text': 0,
-    'jsx-ally/no-autofocus': 0,
-    'jsx-ally/no-static-element-interactions': 0,
+    'jsx-a11y/click-events-have-key-events': 0,
+    'jsx-a11y/alt-text': 0,
+    'jsx-a11y/no-autofocus': 0,
+    'jsx-a11y/no-static-element-interactions': 0,
     'react/no-array-index-key': 0,
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: ['Link'],
+        specialLink: ['to', 'hrefLeft', 'hrefRight'],
+        aspects: ['noHref', 'invalidHref', 'preferButton'],
+      },
+    ],
   },
 };
