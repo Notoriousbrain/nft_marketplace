@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { useTheme } from "next-themes";
+import Image from 'next/image';
+import { useTheme } from 'next-themes';
 
-import images from "../assets";
+import images from '../assets';
 // eslint-disable-next-line import/no-cycle
-import { Button } from ".";
+import { Button } from '.';
 
 const FooterLinks = ({ heading, items }) => (
   <div className="flex-1 justify-start items-start">
@@ -58,15 +58,15 @@ const Footer = () => {
         <div className="flex-1 flexBetweenStart flex-wrap ml-10 md:ml-10 md:mt-8">
           <FooterLinks
             heading="CryptoKet"
-            items={["Explore", "How it Works", "Contact Us"]}
+            items={['Explore', 'How it Works', 'Contact Us']}
           />
           <FooterLinks
             heading="Support"
             items={[
-              "Help Center",
-              "Terms of Service",
-              "Legal",
-              "Privacy Policy",
+              'Help Center',
+              'Terms of Service',
+              'Legal',
+              'Privacy Policy',
             ]}
           />
         </div>
@@ -91,7 +91,7 @@ const Footer = () => {
                   width={24}
                   height={24}
                   alt="social"
-                  className={theme === "light" ? "filter invert" : ""}
+                  className={theme === 'light' ? 'filter invert' : ''}
                 />
               </div>
             ))}

@@ -1,8 +1,8 @@
-import { useRef } from "react";
-import Image from "next/image";
-import { useTheme } from "next-themes";
+import { useRef } from 'react';
+import Image from 'next/image';
+import { useTheme } from 'next-themes';
 
-import images from "../assets";
+import images from '../assets';
 
 const Modal = ({ header, body, footer, handleClose }) => {
   const modalRef = useRef(null);
@@ -31,7 +31,7 @@ const Modal = ({ header, body, footer, handleClose }) => {
             <Image
               src={images.cross}
               layout="fill"
-              className={theme === "light" ? "filter invert" : ""}
+              className={theme === 'light' ? 'filter invert' : ''}
               alt="cross"
             />
           </div>

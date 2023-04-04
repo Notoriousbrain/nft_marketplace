@@ -1,7 +1,8 @@
-const fs = require('fs');
+// const fs = require('fs');
+// eslint-disable-next-line import/no-extraneous-dependencies
 require('@nomiclabs/hardhat-waffle');
 
-const privateKey = fs.readFileSync('.secret').toString().trim();
+// const privateKey = fs.readFileSync('.secret').toString().trim();
 
 module.exports = {
   networks: {
