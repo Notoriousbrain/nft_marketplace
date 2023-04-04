@@ -1,8 +1,8 @@
-import { useRef } from 'react';
-import Image from 'next/image';
-import { useTheme } from 'next-themes';
+import { useRef } from "react";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 
-import images from '../assets';
+import images from "../assets";
 
 const Modal = ({ header, body, footer, handleClose }) => {
   const modalRef = useRef(null);
@@ -15,7 +15,10 @@ const Modal = ({ header, body, footer, handleClose }) => {
   };
 
   return (
-    <div className="flexCenter fixed inset-0 z-10 bg-overlay-black animated fadeIn" onClick={handleClickOutside}>
+    <div
+      className="flexCenter fixed inset-0 z-10 bg-overlay-black animated fadeIn"
+      onClick={handleClickOutside}
+    >
       <div
         ref={modalRef}
         className="w-3/5 md:w-11/12 minlg:w-2/4 dark:bg-nft-dark bg-white flex flex-col rounded-lg"
@@ -28,7 +31,7 @@ const Modal = ({ header, body, footer, handleClose }) => {
             <Image
               src={images.cross}
               layout="fill"
-              className={theme === 'light' && 'filter invert'}
+              className={theme === "light" ? "filter invert" : ""}
               alt="cross"
             />
           </div>
@@ -43,9 +46,7 @@ const Modal = ({ header, body, footer, handleClose }) => {
         <div className="p-10 sm:px-4 border-t border-b dark:border-nft-black-3 border-nft-gray-1">
           {body}
         </div>
-        <div className="flexCenter p-4">
-          {footer}
-        </div>
+        <div className="flexCenter p-4">{footer}</div>
       </div>
     </div>
   );
